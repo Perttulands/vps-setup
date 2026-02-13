@@ -1,0 +1,18 @@
+[Unit]
+Description=MCP Agent Mail Server
+After=network.target
+
+[Service]
+Type=simple
+# CHANGE: Set to your username
+User=CHANGEME
+Environment=HOME=/home/CHANGEME
+Environment=PATH=/home/CHANGEME/.local/bin:/usr/local/bin:/usr/bin:/bin
+WorkingDirectory=/home/CHANGEME/mcp_agent_mail
+EnvironmentFile=/home/CHANGEME/mcp_agent_mail/.env
+ExecStart=/home/CHANGEME/.local/bin/uv run python -m mcp_agent_mail.cli serve-http --host 127.0.0.1 --port 8765
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
