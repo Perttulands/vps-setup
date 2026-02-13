@@ -1,0 +1,28 @@
+[Unit]
+Description=Argus Ops Watchdog
+After=network.target
+Documentation=https://github.com/your-github-username/vps-setup
+
+[Service]
+Type=simple
+User=your-user
+Group=your-user
+WorkingDirectory=/home/your-user/argus
+Environment="PATH=/home/your-user/.local/bin:/home/your-user/.npm-global/bin:/usr/local/bin:/usr/bin:/bin"
+EnvironmentFile=-/home/your-user/argus/argus.env
+ExecStart=/home/your-user/argus/argus.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=argus
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=false
+ReadWritePaths=/home/your-user/argus/logs /home/your-user/.openclaw/workspace/state/argus
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,28 @@
+# USER.md - About Your Human
+
+- **Name:** Your Name
+- **What to call them:** Your Preferred Name
+- **Pronouns:** they/them
+- **Timezone:** Your Timezone (e.g., EST, UTC+2)
+- **Age:** XX
+- **Location:** Your Location
+
+## Context
+
+Describe who you are, what you do, and what you're building with this system.
+
+Example: "I'm a developer building an agentic coding setup on a VPS. I want to orchestrate multiple coding agents, decompose work, and have the AI coordinator act as swarm leader."
+
+## How You Think
+
+- Describe your working style and preferences
+- What kind of communication do you prefer?
+- Do you like details or high-level summaries?
+- How do you approach problems?
+
+## What You Expect
+
+- List your expectations from the AI coordinator
+- What should it prioritize?
+- When should it ask for clarification vs. make decisions?
+- How should it handle failures or edge cases?

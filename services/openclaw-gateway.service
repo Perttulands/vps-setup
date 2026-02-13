@@ -1,0 +1,18 @@
+[Unit]
+Description=OpenClaw Gateway
+After=network.target
+
+[Service]
+Type=simple
+# CHANGE: Set to your username
+User=CHANGEME
+Environment=PATH=/home/CHANGEME/.npm-global/bin:/usr/local/bin:/usr/bin:/bin
+Environment=HOME=/home/CHANGEME
+WorkingDirectory=/home/CHANGEME
+# CHANGE: Set port to one not used by other users on this server
+ExecStart=/home/CHANGEME/.npm-global/bin/openclaw gateway --port 18500
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,24 @@
+# Never commit secrets
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+auth-profiles.json
+argus/argus.env
+secrets/
+
+# Logs and temporary files
+*.log
+argus/logs/
+*.tmp
+*.swp
+*~
+
+# State files (user-specific)
+state/
+.openclaw/
+
+# OS files
+.DS_Store
+Thumbs.db
