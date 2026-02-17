@@ -11,7 +11,7 @@ All coding work goes through the swarm system. One command dispatches an agent w
 
 ```bash
 cd ~/.openclaw/workspace
-br create --title "Description of work" --priority 1
+bd create --title "Description of work" --priority 1
 # → outputs bead ID like bd-32d
 
 ./scripts/dispatch.sh <bead-id> <repo-path> <agent-type> "<prompt>"
@@ -65,7 +65,7 @@ tmux -S /tmp/openclaw-coding-agents.sock capture-pane -p -J -t "agent-<bead-id>"
 
 ```bash
 ./scripts/verify.sh <bead-id>    # Quality gate
-br update <bead-id> --status done  # Close
+bd update <bead-id> --status done  # Close
 ```
 
 Failed agents get max 2 retries (fresh session each time). After 2 failures → escalate.

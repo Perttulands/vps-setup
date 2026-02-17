@@ -30,7 +30,7 @@ User describes what they want. Coordinator interprets, decomposes into beads.
 
 ### 2. Create Bead
 ```bash
-br create --title "What needs to happen" --priority 1
+bd create --title "What needs to happen" --priority 1
 ```
 Priority scale: 0=critical, 1=high, 2=medium, 3=low, 4=backlog.
 
@@ -77,7 +77,7 @@ Coordinator reviews verification results, not raw output.
 
 ### 7. Close
 ```bash
-br update <bead-id> --status done
+bd update <bead-id> --status done
 ```
 Session auto-killed by dispatch script on completion.
 

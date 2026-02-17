@@ -313,7 +313,7 @@ cat ~/.openclaw/workspace/memory/$(date +%Y-%m-%d).md
 ### Required CLI Tools
 - `claude` - Claude Code CLI
 - `codex` - Codex CLI (optional)
-- `br` - Beads work tracker
+- `bd` - Beads work tracker
 - `openclaw` - OpenClaw CLI
 
 ### Optional Tools

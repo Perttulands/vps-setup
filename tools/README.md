@@ -4,23 +4,23 @@ This directory contains installation scripts for recommended tools that enhance 
 
 ## Core Tools
 
-### beads / beads_rust (br)
+### beads (bd)
 **Purpose:** Lightweight work tracking and context management
 
 **Why you need it:** Track coding tasks, link them to agent sessions, maintain work history
 
 **Installation:**
 ```bash
-cargo install beads_rust
-# Or follow instructions at: https://github.com/your-repo/beads_rust
+go install github.com/your-repo/beads@latest
+# Or follow instructions at: https://github.com/your-repo/beads
 ```
 
 **Usage:**
 ```bash
-br create --title "Add user auth" --priority 1  # Create a task
-br list                                          # List all tasks
-br show <bead-id>                               # Show task details
-br update <bead-id> --status done               # Mark complete
+bd create --title "Add user auth" --priority 1  # Create a task
+bd list                                          # List all tasks
+bd show <bead-id>                               # Show task details
+bd update <bead-id> --status done               # Mark complete
 ```
 
 ### cass
@@ -179,7 +179,7 @@ brew install tmux
 
 | Tool | Used By | Purpose |
 |------|---------|---------|
-| br | Swarm system | Work tracking, bead IDs |
+| bd | Swarm system | Work tracking, bead IDs |
 | tmux | dispatch.sh | Agent session management |
 | jq | All scripts | JSON processing |
 | cass | Manual | Session discovery |
@@ -195,7 +195,7 @@ Create installation scripts in this directory for tools that require complex set
 ```bash
 tools/
 ├── README.md           # This file
-├── install-beads.sh    # Install beads_rust
+├── install-beads.sh    # Install beads
 ├── install-cass.sh     # Install cass
 └── install-ubs.sh      # Install ubs
 ```
@@ -205,7 +205,7 @@ tools/
 After installing tools, verify they're available:
 
 ```bash
-command -v br && echo "✓ beads_rust installed"
+command -v bd && echo "✓ beads installed"
 command -v cass && echo "✓ cass installed"
 command -v ntm && echo "✓ ntm installed"
 command -v ubs && echo "✓ ubs installed"

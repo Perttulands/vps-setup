@@ -11,10 +11,10 @@
 All coding work flows through the swarm. Read the `coding-agents` skill for details.
 
 ```bash
-br create --title "task" --priority 1          # Create bead
+bd create --title "task" --priority 1          # Create bead
 ./scripts/dispatch.sh <bead> <repo> codex "prompt"  # Dispatch agent
 ./scripts/verify.sh <bead>                     # Quality gate
-br update <bead> --status done                 # Close
+bd update <bead> --status done                 # Close
 ```
 
 ## Services (systemd)
@@ -29,7 +29,7 @@ br update <bead> --status done                 # Close
 
 | Tool | Purpose |
 |------|---------|
-| br | Beads — work tracking |
+| bd | Beads — work tracking |
 | bv | Beads TUI viewer |
 | claude | Claude Code CLI |
 | codex | Codex CLI |

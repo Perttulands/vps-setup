@@ -120,7 +120,7 @@ nano argus.env  # Add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID
 
 ```bash
 # Create a test task
-br create --title "Test agent dispatch" --priority 1
+bd create --title "Test agent dispatch" --priority 1
 
 # Get the bead ID from output (e.g., "abc123")
 BEAD_ID="abc123"
@@ -198,13 +198,13 @@ vps-setup/
 
 ### Beads (Work Items)
 
-Beads are structured task records tracked by the `br` tool:
+Beads are structured task records tracked by the `bd` tool:
 
 ```bash
-br create --title "Add user authentication" --priority 1
-br list
-br show <bead-id>
-br update <bead-id> --status done
+bd create --title "Add user authentication" --priority 1
+bd list
+bd show <bead-id>
+bd update <bead-id> --status done
 ```
 
 ### Agent Dispatch
@@ -284,7 +284,7 @@ journalctl -u argus -f
 
 1. **Create a task (bead)**
    ```bash
-   br create --title "Implement feature X" --priority 1
+   bd create --title "Implement feature X" --priority 1
    ```
 
 2. **Dispatch agent**
@@ -304,7 +304,7 @@ journalctl -u argus -f
 
 5. **Review and close**
    ```bash
-   br update abc123 --status done
+   bd update abc123 --status done
    ```
 
 ### Multi-Agent Workflow
@@ -405,7 +405,7 @@ See [argus/README.md](argus/README.md) for full documentation.
 See [tools/README.md](tools/README.md) for installation instructions.
 
 **Core:**
-- `br` / `bv` - Work tracking
+- `bd` / `bv` - Work tracking
 - `claude` - Claude Code CLI
 - `openclaw` - OpenClaw CLI
 - `jq` - JSON processing

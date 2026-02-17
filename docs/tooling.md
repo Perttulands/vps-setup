@@ -4,14 +4,14 @@ Complete list of CLI tools and services installed on this VPS for agentic coding
 
 ## Work Tracking
 
-### br (Beads Rust)
-- **Path**: `~/.local/bin/br`
+### bd (Beads)
+- **Path**: `~/.local/bin/bd`
 - **Purpose**: Task/issue tracking for the flywheel
 - **Key commands**:
-  - `br create --title "..." --priority N` — create task (0=critical, 1=high, 2=medium, 3=low, 4=backlog)
-  - `br update <id> --status done` — mark complete
-  - `br list` — show all beads
-  - `br show <id>` — view details
+  - `bd create --title "..." --priority N` — create task (0=critical, 1=high, 2=medium, 3=low, 4=backlog)
+  - `bd update <id> --status done` — mark complete
+  - `bd list` — show all beads
+  - `bd show <id>` — view details
 
 ### bv (Beads Viewer)
 - **Path**: `/usr/local/bin/bv`
@@ -163,7 +163,7 @@ claude --version
 codex --version
 openclaw --version
 gh --version
-br --version
+bd --version
 ntm --version
 tailscale --version
 ```
